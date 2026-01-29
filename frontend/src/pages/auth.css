@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FULL BACKGROUND */
+.auth-bg {
+  height: 100vh;
+  width: 100%;
+  background: url("../assets/cafeinterior.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CARD */
+.auth-wrapper {
+  width: 800px;
+  height: 520px;
+  background: white;
+  border-radius: 24px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+}
+
+/* LEFT FORM */
+.auth-form {
+  width: 45%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-mini-logo {
+  width: 150px;
+  display: block;
+  margin: 0 auto 35px auto;
+  opacity: 0.95;
+}
+
+.auth-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: #2c1206;
+}
+
+.auth-tagline {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 24px;
+}
+
+.auth-heading {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px 0 6px;
+  letter-spacing: 0.5px;
+}
+
+.auth-subtext {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.auth-form input {
+  padding: 12px 40px;
+  border-radius: 30px;
+  border: none;
+  background: #f1f5ff;
+  margin-bottom: 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* BUTTON */
+.btn-primary {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: #270f06;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* TEXT LINKS */
+.forgot {
+  font-size: 12px;
+  color: #270f06;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.switch {
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.switch span {
+  color: #270f06;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RIGHT IMAGE */
+.auth-image {
+  width: 55%;
+  background: url("../assets/coffeeee.jpg") center/cover no-repeat;
+}

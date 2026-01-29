@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap");
+
+/* ================= GLOBAL ================= */
+.home {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 500px;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../assets/loginpageimg.jpg") center/cover no-repeat;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 54px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #eee;
+}
+
+/* ================= FEATURED WORKS ================= */
+
+.featured {
+  padding: 100px 40px;
+  background: #ffffff;
+}
+
+/* MAIN LAYOUT */
+.featured-layout {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* RIGHT SIDE HEADING */
+.featured-heading {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.featured-heading span:first-child {
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #e8732a;
+  font-weight: 500;
+}
+
+.featured-heading span:last-child {
+  font-family: "Playfair Display", serif;
+  font-size: 46px;
+  font-weight: 700;
+  color: #2c1206;
+  line-height: 1.1;
+}
+
+/* LEFT GRID */
+.featured-editorial {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 260px;
+  gap: 26px;
+  grid-auto-flow: dense;
+}
+
+/* CARD */
+.editorial-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.editorial-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SIZE VARIANTS */
+.editorial-card.tall {
+  grid-row: span 2;
+}
+
+.editorial-card.wide {
+  grid-column: span 2;
+}
+
+/* HOVER */
+.editorial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
+}
+
+/* OVERLAY */
+.editorial-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.7)
+  );
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.editorial-tag {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffd2b3;
+  margin-bottom: 6px;
+}
+
+.editorial-overlay p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .featured-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .featured-heading {
+    align-items: center;
+    text-align: center;
+  }
+
+  .featured-editorial {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+  }
+
+  .editorial-card.wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-editorial {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-card.tall,
+  .editorial-card.wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+
+/* ================= STORY ================= */
+
+.story {
+  padding: 80px 40px;
+  background: #fff9f5;
+}
+
+.story-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story-image {
+  position: relative;
+}
+
+.story-image img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.story-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #e8732a;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 30px;
+}
+
+.story-label {
+  color: #e8732a;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.story-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+}
+
+.story-text p {
+  color: #555;
+  line-height: 1.8;
+}
+
+/* ================= BOOKING STRIP ================= */
+
+.booking-strip {
+  background: #f2f2f2;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.booking-label {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.booking-number {
+  font-size: 56px;
+  margin: 20px 0;
+  color: transparent;
+  -webkit-text-stroke: 1px #222;
+}
+
+.booking-hours {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.booking-hours p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .featured-editorial {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+  }
+
+  .editorial-card.wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-editorial {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 240px;
+  }
+
+  .editorial-card.tall,
+  .editorial-card.wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}

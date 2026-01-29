@@ -1,0 +1,158 @@
+/* ================= DECORATIVE LEAVES ================= */
+
+.leaf {
+  --flip: 1;
+  position: fixed;
+  font-size: 60px;
+  opacity: 0.8;
+  z-index: 1;
+  pointer-events: none;
+  color: #90c695;
+  animation: sway 4s ease-in-out infinite;
+}
+
+.leaf-left-top {
+  top: 100px;
+  left: -20px;
+}
+
+.leaf-left-bottom {
+  bottom: 200px;
+  left: -30px;
+  animation-delay: 1s;
+}
+
+.leaf-right-top {
+  top: 300px;
+  right: -20px;
+  transform: scaleX(-1);
+}
+
+.leaf-right-bottom {
+  bottom: 100px;
+  right: -30px;
+  transform: scaleX(-1);
+  animation-delay: 1.5s;
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+/* ================= CONTACT PAGE ================= */
+
+.contact {
+  padding-top: 70px;
+  background: #ffffff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+.contact-hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+}
+
+.contact-title {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 64px;
+  color: #1c1c1c;
+
+  color: transparent;
+  -webkit-text-stroke: 1px #1c1c1c;
+}
+
+.contact-subtitle {
+  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #e86b2a;
+  text-transform: uppercase;
+}
+
+/* CONTENT */
+.contact-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* INFO */
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.contact-info p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.contact-hours {
+  margin-top: 25px;
+}
+
+/* FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #e86b2a;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  align-self: flex-start;
+  background: transparent;
+  border: 2px solid #e86b2a;
+  color: #e86b2a;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #e86b2a;
+  color: #ffffff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-title {
+    font-size: 48px;
+  }
+}

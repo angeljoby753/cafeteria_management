@@ -37,7 +37,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/signup", {
+      const response = await axios.post("http://127.0.0.1:8000/api/signup/", {
         username: formData.username,
         email: formData.email,
         password: formData.password,
@@ -51,9 +51,9 @@ const Signup = () => {
       // Handles errors from Django (e.g., username already exists)
       const serverError = err.response?.data;
       setError(
-        serverError?.username?.[0] || 
-        serverError?.email?.[0] || 
-        "Something went wrong. Please try again."
+        serverError?.username?.[0] ||
+          serverError?.email?.[0] ||
+          "Something went wrong. Please try again.",
       );
     } finally {
       setLoading(false);

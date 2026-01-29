@@ -1,0 +1,6 @@
+# Requirements for the backend (inferred from codebase)
+# Django version is indicated in settings.py
+Django==6.0.1
+djangorestframework
+django-cors-headers
+mysqlclient

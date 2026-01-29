@@ -25,7 +25,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/login/", {
+      const response = await axios.post("http://127.0.0.1:8000/api/login/", {
         username: formData.username,
         password: formData.password,
       });
@@ -43,9 +43,9 @@ const Login = () => {
     } catch (err) {
       const serverError = err.response?.data;
       setError(
-        serverError?.detail || 
-        serverError?.non_field_errors?.[0] || 
-        "Invalid username or password"
+        serverError?.detail ||
+          serverError?.non_field_errors?.[0] ||
+          "Invalid username or password",
       );
     } finally {
       setLoading(false);
@@ -83,18 +83,16 @@ const Login = () => {
 
             <span className="forgot">Forgot password?</span>
 
-            <button 
-              type="submit" 
-              className="btn-primary" 
-              disabled={loading}
-            >
+            <button type="submit" className="btn-primary" disabled={loading}>
               {loading ? "LOGGING IN..." : "LOGIN"}
             </button>
           </form>
 
           <p className="switch">
             Don’t have an account?{" "}
-            <Link to="/signup"><span>Signup</span></Link>
+            <Link to="/signup">
+              <span>Signup</span>
+            </Link>
           </p>
         </div>
 

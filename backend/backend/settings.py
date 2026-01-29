@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'corsheaders',
-    
+    'rest_framework.authtoken',
+
     'users.apps.UsersConfig',
 ]
 
@@ -74,8 +75,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'backend.wsgi.application'
-
-
 
 
 # Database
@@ -148,6 +147,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # REST Framework settings
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
